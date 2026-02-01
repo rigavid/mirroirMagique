@@ -2,12 +2,18 @@
     "screen-size": [1920, 1080], // resolution of the screen
     "rotation": -90, // if your text has to be flipped (note that for 90 degrees, [x, y] resolution will result in an image of size [y, x])
     "modules": [ // list of modules to be drawn
+        // /!\ Be careful /!\ modules are drawn in order, even one over another
         {
-            "name": "time", // name of the module
+            "name": "time", // type of the module
             "pos": ["50%", "50%"], // can be an integer, a float or a percentile (of x and y respectively)
             "font": "./kaushan.ttf", // path to the font (you can also use "default")
             "font-size": 100,
             "font-color": "white" // use any CSS valid color code (RGB not yet supported)
+        },
+        {
+            "name": "image", // type of the module
+            "pos": ["50%", "50%"], // center of the image (cf. time.pos for units)
+            "path": "./image.jpg" // path to the image
         }
     ]
 }
